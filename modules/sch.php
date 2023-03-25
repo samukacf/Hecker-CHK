@@ -17,7 +17,7 @@ $cvv = multiexplode(array(":", "/", " ", "|"), $message)[3];
       $mes_id = $sent['result']['message_id'];
 
 $ch = curl_init();
-curl_setopt($ch, CURLOPT_URL, 'https://smk.herokuapp.com/modules/sch.php?lista='.$lista.'');
+curl_setopt($ch, CURLOPT_URL, 'https://smkchk.up.railway.app/modules/sch.php?lista='.$lista.'');
 curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
 $fimaa = curl_exec($ch);
